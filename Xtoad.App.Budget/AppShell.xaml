@@ -79,6 +79,27 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Row="0" Grid.Column="0" Padding="0" CornerRadius="100" IsClippedToBounds="True" HorizontalOptions="Center" HeightRequest="70" WidthRequest="70">
+                    
+                <Image  Source="splash_logo.png" IsOpaque="True"  MinimumHeightRequest="128" MinimumWidthRequest="128"></Image>
+                </Frame>
+                <Button Grid.Row="0" Grid.Column="0"  Text="登录/注册" Clicked="OnMenuItemClicked" ></Button>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
     <FlyoutItem Title="关于我们" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
@@ -86,9 +107,9 @@
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
 
+    <!--<MenuItem Text="登录/注册" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    </MenuItem>-->
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="登录/注册" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
-    </MenuItem>
 
     <!--
         TabBar lets you define content that won't show up in a flyout menu. When this content is active
