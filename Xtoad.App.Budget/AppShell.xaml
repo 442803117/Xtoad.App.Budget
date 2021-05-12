@@ -79,7 +79,7 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-<!--
+    <!--
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <Grid Padding="5">
@@ -109,11 +109,33 @@
 -->
 
     <TabBar>
-        <ShellContent Title="Home" Icon="{x:StaticResource IconHome}" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
-        <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="首页" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" >
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf015;" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="图表" Route="ReportPage" ContentTemplate="{DataTemplate local:HomePage}" >
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesome5Free-Regular" Glyph="&#xf080;" Size="100" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" >
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf055;" Size="Large" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="查看" ContentTemplate="{DataTemplate local:ItemsPage}" >
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf022;" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="我的" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" >
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf2bd;" />
+            </ShellContent.Icon>
+        </ShellContent>
     </TabBar>
-    
+
     <!--<MenuItem Text="登录/注册" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>-->
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

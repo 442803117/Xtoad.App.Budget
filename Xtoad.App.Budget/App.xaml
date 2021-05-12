@@ -28,16 +28,6 @@
                 </Setter>
             </Style>
 
-            <OnPlatform x:Key="IconFontFamily" x:TypeArguments="x:String">
-                <On Platform="Android" Value="Font Awesome 5 Free-Regular-400.ttf#Font Awesome 5 Free-Regular Icons"/>
-                <On Platform="iOS" Value="Material Design Icons"/>
-                <On Platform="UWP" Value="Assets/Font Awesome 5 Free-Regular-400.ttf#Font Awesome 5 Free-Regular Icons"/>
-            </OnPlatform>
-
-            <!-- Icons used by the app -->
-            <x:String x:Key="IconHome">f80a</x:String>
-            <x:String x:Key="IconAbout">f2bb</x:String>
-            
         </ResourceDictionary>        
     </Application.Resources>
 </Application>
