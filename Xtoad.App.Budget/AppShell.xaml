@@ -79,7 +79,7 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-
+<!--
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <Grid Padding="5">
@@ -99,14 +99,21 @@
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
-
+    
     <FlyoutItem Title="关于我们" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
     <FlyoutItem Title="项目" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
+-->
 
+    <TabBar>
+        <ShellContent Title="Home" Icon="{x:StaticResource IconHome}" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
+        <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </TabBar>
+    
     <!--<MenuItem Text="登录/注册" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>-->
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
