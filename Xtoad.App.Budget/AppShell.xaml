@@ -111,12 +111,12 @@
     <TabBar>
         <ShellContent Title="首页" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" >
             <ShellContent.Icon>
-                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf015;" />
+                <FontImageSource FontFamily="FontAwesome5Free-Regular" Glyph="&#xf004;" />
             </ShellContent.Icon>
         </ShellContent>
         <ShellContent Title="图表" Route="ReportPage" ContentTemplate="{DataTemplate local:HomePage}" >
             <ShellContent.Icon>
-                <FontImageSource FontFamily="FontAwesome5Free-Regular" Glyph="&#xf080;" Size="100" />
+                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf21e;" Size="100" />
             </ShellContent.Icon>
         </ShellContent>
         <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" >
@@ -126,10 +126,10 @@
         </ShellContent>
         <ShellContent Title="查看" ContentTemplate="{DataTemplate local:ItemsPage}" >
             <ShellContent.Icon>
-                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf022;" />
+                <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf4be;" />
             </ShellContent.Icon>
         </ShellContent>
-        <ShellContent Title="我的" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" >
+        <ShellContent Title="我的" Route="ProfilePage" ContentTemplate="{DataTemplate local:ProfilePage}" >
             <ShellContent.Icon>
                 <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf2bd;" />
             </ShellContent.Icon>
