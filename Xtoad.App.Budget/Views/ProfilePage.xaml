@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xtoad.App.Budget.Views.ProfilePage"
+             xmlns:vm="clr-namespace:Xtoad.App.Budget.ViewModels"
+             Title="{Binding Title}" HeightRequest="10">
+
+    <ContentPage.BindingContext>
+        <vm:ProfileViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#FFE8FA</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                             BackgroundColor="{x:StaticResource Accent}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="30"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" >
+                            <Image.Source>
+                                <FontImageSource  FontFamily="FontAwesome5Free-Solid" Glyph="&#xf2bd;" Size="60" />
+                            </Image.Source>
+                        </Image>
+                        <StackLayout Grid.Row="0" Grid.Column="1" 
+                                     VerticalOptions="FillAndExpand" HorizontalOptions="Start">
+                            <Label Text="残酷月光" FontSize="Medium" TextColor="Black"></Label>
+                            <Label Text="账号：442803117" FontSize="Small"></Label>
+                            <Label Text="状态：" FontSize="Small"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="2" 
+                                     VerticalOptions="Center" HorizontalOptions="Start">
+                            <Label FontFamily="FontAwesome5Free-Solid" Text="&#xf054;">
+                            </Label>
+                        </StackLayout>
+                    </Grid>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Start developing now" FontSize="Title"/>
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,24,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Learn more at "/>
+                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Learn more"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+
+                <Button Margin="0,10,0,0" Text="注册/登录"
+                        Command="{Binding RegisterCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
