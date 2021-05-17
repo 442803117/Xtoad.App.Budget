@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xtoad.App.Budget.Views.CoustmContentView.Bucket.Home.BucketMoneyHouse"
-             xmlns:local="clr-namespace:Xtoad.App.Budget.ViewModels.Bucket.Home"
+             x:Class="Xtoad.App.Budget.Views.CoustmContentView.Home.Bucket.BucketMoneyHouse"
+             xmlns:local="clr-namespace:Xtoad.App.Budget.ViewModels.Home.Bucket"
              xmlns:model="clr-namespace:Xtoad.App.Budget.Models.Bucket">
   <ContentView.Content>
       <StackLayout Padding="8">
@@ -87,7 +87,7 @@
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:BucketMoneyHouseViewModel}}, Path=ItemTapped}"		
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:HouseItemsViewModel}}, Path=ItemTapped}"		
                                 CommandParameter="{Binding .}">
                                     </TapGestureRecognizer>
                                 </StackLayout.GestureRecognizers>

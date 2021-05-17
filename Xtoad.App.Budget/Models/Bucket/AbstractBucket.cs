@@ -10,12 +10,8 @@ namespace Xtoad.App.Budget.Models.Bucket
     /// 心愿基类
     /// 
     /// </summary>
-    public abstract class AbstractBucket
+    public abstract class AbstractBucket : BaseModel
     {
-        /// <summary>
-        /// ID
-        /// </summary>
-        public string Id { get; set; }
         /// <summary>
         /// 标题
         /// </summary>

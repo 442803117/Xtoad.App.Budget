@@ -47,6 +47,10 @@ namespace Xtoad.App.Budget.Models.Bucket
         /// <summary>
         /// 攒钱周期
         /// </summary>
-        public BucketCycleEnum bucketCycle { get; set; }
+        public BucketCycleEnum BucketCycle { get; set; }
+        /// <summary>
+        /// 攒钱方式
+        /// </summary>
+        public BucketWayEnum BucketWay { get; set; }
     }
 }

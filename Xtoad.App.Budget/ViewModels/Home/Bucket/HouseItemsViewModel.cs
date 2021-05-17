@@ -8,11 +8,13 @@ using Xamarin.Forms;
 using Xtoad.App.Budget.Models;
 using Xtoad.App.Budget.Models.Bucket;
 using Xtoad.App.Budget.Services;
+using Xtoad.App.Budget.ViewModels.Bucket;
 using Xtoad.App.Budget.Views;
+using Xtoad.App.Budget.Views.Bucket;
 
-namespace Xtoad.App.Budget.ViewModels.Bucket.Home
+namespace Xtoad.App.Budget.ViewModels.Home.Bucket
 {
-    public class BucketMoneyHouseViewModel : BaseViewModel
+    public class HouseItemsViewModel : BaseViewModel
     {
 
         public IDataStore<BucketMoneyHouse> DataStore => DependencyService.Get<IDataStore<BucketMoneyHouse>>();
@@ -24,7 +26,7 @@ namespace Xtoad.App.Budget.ViewModels.Bucket.Home
         public Command AddItemCommand { get; }
         public Command<BucketMoneyHouse> ItemTapped { get; }
 
-        public BucketMoneyHouseViewModel()
+        public HouseItemsViewModel()
         {
             Title = "买房心愿";
             IsBusy = true;
@@ -86,7 +88,7 @@ namespace Xtoad.App.Budget.ViewModels.Bucket.Home
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            //await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(BucketMoneyHouseDetailPage)}?{nameof(MoneyHouseDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

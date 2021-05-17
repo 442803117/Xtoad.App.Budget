@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xtoad.App.Budget.ViewModels.Bucket.Home;
+using Xtoad.App.Budget.ViewModels.Home.Bucket;
 
-namespace Xtoad.App.Budget.Views.CoustmContentView.Bucket.Home
+namespace Xtoad.App.Budget.Views.CoustmContentView.Home.Bucket
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BucketMoneyHouse : ContentView
@@ -16,9 +16,9 @@ namespace Xtoad.App.Budget.Views.CoustmContentView.Bucket.Home
         public BucketMoneyHouse()
         {
             InitializeComponent();
-            BucketMoneyHouseViewModel _BucketMoneyHouseViewModel = new BucketMoneyHouseViewModel();
-            _BucketMoneyHouseViewModel.LoadItemsCommand.Execute(null);
-            BindingContext = _BucketMoneyHouseViewModel;
+            HouseItemsViewModel _BucketMoneyHouseListViewModel = new HouseItemsViewModel();
+            _BucketMoneyHouseListViewModel.LoadItemsCommand.Execute(null);
+            BindingContext = _BucketMoneyHouseListViewModel;
         }
     }
 }
