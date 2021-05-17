@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xtoad.App.Budget.Models;
 
-namespace Xtoad.App.Budget.Services
+namespace Xtoad.App.Budget.Services.Mock
 {
     public class MockDataStore : IDataStore<Item>
     {

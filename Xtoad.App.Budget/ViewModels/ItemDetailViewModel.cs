@@ -3,12 +3,15 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xtoad.App.Budget.Models;
+using Xtoad.App.Budget.Services;
 
 namespace Xtoad.App.Budget.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+
         private string itemId;
         private string text;
         private string description;

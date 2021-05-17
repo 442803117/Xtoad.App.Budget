@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xtoad.App.Budget.Services;
+using Xtoad.App.Budget.Services.Mock;
 using Xtoad.App.Budget.Views;
 
 namespace Xtoad.App.Budget
@@ -14,6 +14,7 @@ namespace Xtoad.App.Budget
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+            DependencyService.Register<MockBucketMoneyHouseDataStore>();
             MainPage = new AppShell();
         }
 

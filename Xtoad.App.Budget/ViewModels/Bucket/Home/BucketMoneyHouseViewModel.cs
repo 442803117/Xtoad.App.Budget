@@ -6,31 +6,32 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 using Xtoad.App.Budget.Models;
+using Xtoad.App.Budget.Models.Bucket;
 using Xtoad.App.Budget.Services;
 using Xtoad.App.Budget.Views;
 
-namespace Xtoad.App.Budget.ViewModels
+namespace Xtoad.App.Budget.ViewModels.Bucket.Home
 {
-    public class ItemsViewModel : BaseViewModel
+    public class BucketMoneyHouseViewModel : BaseViewModel
     {
 
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<BucketMoneyHouse> DataStore => DependencyService.Get<IDataStore<BucketMoneyHouse>>();
 
+        private BucketMoneyHouse _selectedItem;
 
-        private Item _selectedItem;
-
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<BucketMoneyHouse> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<BucketMoneyHouse> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public BucketMoneyHouseViewModel()
         {
-            Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Title = "买房心愿";
+            IsBusy = true;
+            Items = new ObservableCollection<BucketMoneyHouse>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<Item>(OnItemSelected);
+            ItemTapped = new Command<BucketMoneyHouse>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -64,7 +65,7 @@ namespace Xtoad.App.Budget.ViewModels
             SelectedItem = null;
         }
 
-        public Item SelectedItem
+        public BucketMoneyHouse SelectedItem
         {
             get => _selectedItem;
             set
@@ -79,13 +80,13 @@ namespace Xtoad.App.Budget.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        async void OnItemSelected(BucketMoneyHouse item)
         {
             if (item == null)
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            //await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

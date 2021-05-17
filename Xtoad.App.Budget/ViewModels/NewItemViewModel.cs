@@ -4,11 +4,15 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xtoad.App.Budget.Models;
+using Xtoad.App.Budget.Services;
 
 namespace Xtoad.App.Budget.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+
+
         private string text;
         private string description;
 

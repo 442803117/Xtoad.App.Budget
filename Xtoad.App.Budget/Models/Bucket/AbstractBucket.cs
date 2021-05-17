@@ -15,7 +15,7 @@ namespace Xtoad.App.Budget.Models.Bucket
         /// <summary>
         /// ID
         /// </summary>
-        public Int64 Id { get; set; }
+        public string Id { get; set; }
         /// <summary>
         /// 标题
         /// </summary>

@@ -11,9 +11,8 @@ using Xtoad.App.Budget.Views;
 
 namespace Xtoad.App.Budget.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class HomeViewModel : BaseViewModel
     {
-
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
 
@@ -24,7 +23,7 @@ namespace Xtoad.App.Budget.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public HomeViewModel()
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();

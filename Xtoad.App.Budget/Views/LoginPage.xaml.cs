@@ -10,7 +10,7 @@ using Xtoad.App.Budget.ViewModels;
 namespace Xtoad.App.Budget.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class LoginPage : TabbedPage
     {
         public LoginPage()
         {
