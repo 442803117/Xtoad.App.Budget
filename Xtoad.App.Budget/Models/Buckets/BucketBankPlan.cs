@@ -22,6 +22,9 @@ namespace Xtoad.App.Budget.Models.Buckets
         /// 存入时间
         /// </summary>
         public DateTime BankTime { get; set; }
+        /// <summary>
+        /// 计划状态
+        /// </summary>
         public BankPlanStatusEnum BankStatus  { get; set;}
     }
 }

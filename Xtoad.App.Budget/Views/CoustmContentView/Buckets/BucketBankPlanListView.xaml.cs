@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xtoad.App.Budget.ViewModels.Home;
 
 namespace Xtoad.App.Budget.Views.CoustmContentView.Buckets
 {
@@ -15,7 +16,13 @@ namespace Xtoad.App.Budget.Views.CoustmContentView.Buckets
         public BucketBanPlankListView()
         {
             InitializeComponent();
-            BindingContext = new BucketBanPlankListView();
+            BindingContext = new BucketBankPlanViewModel();
+        }
+
+        public void OnDelete(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            //DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
         }
     }
 }

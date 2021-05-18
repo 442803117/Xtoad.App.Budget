@@ -15,7 +15,7 @@ namespace Xtoad.App.Budget.Services.Mock
         {
             items = new List<BucketBankHouse>()
             {
-                new BucketBankHouse { Id = Guid.NewGuid().ToString(), Title = "我要买首套房", 
+                new BucketBankHouse { Id ="1", Title = "我要买首套房", 
                     Description="This is an item description." ,Amount = 250000, Own=1000 },
                 new BucketBankHouse { Id = Guid.NewGuid().ToString(), Title = "Second item", 
                     Description="This is an item description." ,Amount = 350000, Own=1000},

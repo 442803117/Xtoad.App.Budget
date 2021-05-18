@@ -17,23 +17,23 @@ namespace Xtoad.App.Budget.ViewModels.Home
     public class BucketBankPlanViewModel : BaseViewModel
     {
 
-        public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
+        public IDataStore<BucketBankPlan> DataStore => DependencyService.Get<IDataStore<BucketBankPlan>>();
 
-        private BucketBankHouse _selectedItem;
+        private BucketBankPlan _selectedItem;
 
-        public ObservableCollection<BucketBankHouse> Items { get; }
+        public ObservableCollection<BucketBankPlan> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<BucketBankHouse> ItemTapped { get; }
+        public Command<BucketBankPlan> ItemTapped { get; }
 
         public BucketBankPlanViewModel()
         {
             Title = "买房心愿";
             IsBusy = true;
-            Items = new ObservableCollection<BucketBankHouse>();
+            Items = new ObservableCollection<BucketBankPlan>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<BucketBankHouse>(OnItemSelected);
+            ItemTapped = new Command<BucketBankPlan>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -67,7 +67,7 @@ namespace Xtoad.App.Budget.ViewModels.Home
             SelectedItem = null;
         }
 
-        public BucketBankHouse SelectedItem
+        public BucketBankPlan SelectedItem
         {
             get => _selectedItem;
             set
@@ -82,7 +82,7 @@ namespace Xtoad.App.Budget.ViewModels.Home
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(BucketBankHouse item)
+        async void OnItemSelected(BucketBankPlan item)
         {
             if (item == null)
                 return;

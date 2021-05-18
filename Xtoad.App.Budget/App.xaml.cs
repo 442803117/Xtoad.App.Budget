@@ -15,6 +15,7 @@ namespace Xtoad.App.Budget
 
             DependencyService.Register<MockDataStore>();
             DependencyService.Register<MockBucketMoneyHouseDataStore>();
+            DependencyService.Register<MockBucketBankPlanDataStore>();
             MainPage = new AppShell();
         }
 

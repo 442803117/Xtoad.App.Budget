@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:localview="clr-namespace:Xtoad.App.Budget.Views.CoustmContentView.Buckets"
              x:Class="Xtoad.App.Budget.Views.Buckets.BucketBankDetailPage"
+             
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
@@ -12,8 +14,10 @@
         <Label Text="{Binding Description}" FontSize="Small"/>
 
         <Frame>
-            <Label Text="攒钱记录" TextColor="Black"/>
-            
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="攒钱记录" TextColor="Black"/>
+                <localview:BucketBanPlankListView />
+            </StackLayout>
         </Frame>
         
     </StackLayout>
