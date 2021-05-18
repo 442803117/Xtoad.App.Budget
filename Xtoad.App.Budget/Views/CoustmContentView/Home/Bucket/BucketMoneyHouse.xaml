@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xtoad.App.Budget.Views.CoustmContentView.Home.Bucket.BucketMoneyHouse"
              xmlns:local="clr-namespace:Xtoad.App.Budget.ViewModels.Home.Bucket"
-             xmlns:model="clr-namespace:Xtoad.App.Budget.Models.Bucket">
+             xmlns:model="clr-namespace:Xtoad.App.Budget.Models.Buckets">
   <ContentView.Content>
       <StackLayout Padding="8">
             <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" TextColor="Black"></Label>
@@ -14,7 +14,7 @@
                 SelectionMode="None">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                                <StackLayout x:DataType="model:BucketMoneyHouse" Margin="4">
+                        <StackLayout x:DataType="model:BucketBankHouse" Margin="4">
                                 <Frame BackgroundColor="AliceBlue" BorderColor="#EFEFEF" HasShadow="False" 
                                        CornerRadius="10" IsClippedToBounds="True" Padding="0" >
                                     <StackLayout Orientation="Vertical" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

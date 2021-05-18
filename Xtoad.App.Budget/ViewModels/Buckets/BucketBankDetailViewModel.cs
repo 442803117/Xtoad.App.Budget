@@ -3,15 +3,15 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xtoad.App.Budget.Models;
-using Xtoad.App.Budget.Models.Bucket;
+using Xtoad.App.Budget.Models.Buckets;
 using Xtoad.App.Budget.Services;
 
-namespace Xtoad.App.Budget.ViewModels.Bucket
+namespace Xtoad.App.Budget.ViewModels.Buckets
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class MoneyHouseDetailViewModel : BaseViewModel
+    public class BucketBankDetailViewModel : BaseViewModel
     {
-        public IDataStore<BucketMoneyHouse> DataStore => DependencyService.Get<IDataStore<BucketMoneyHouse>>();
+        public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
 
         private string itemId;
         private string text;

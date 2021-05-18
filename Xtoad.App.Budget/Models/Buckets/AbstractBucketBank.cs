@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using Xtoad.App.Budget.Enum.Bucket;
 
-namespace Xtoad.App.Budget.Models.Bucket
+namespace Xtoad.App.Budget.Models.Buckets
 {
 
     /// <summary>
     /// 攒钱心愿基类
     /// 
     /// </summary>
-    public abstract class AbstractBucketMoney : AbstractBucket
+    public abstract class AbstractBucketBank : AbstractBucket
     {
         /// <summary>
         /// 目标金额

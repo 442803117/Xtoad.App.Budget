@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Xtoad.App.Budget.Models.Bucket
+namespace Xtoad.App.Budget.Models.Buckets
 {
     /// <summary>
     /// 攒钱明细记录
     /// </summary>
-    public class BucketMoneyDetail :BaseModel
+    public class BucketBankDetail :BaseModel
     {
         /// <summary>
         /// 攒钱记录ID

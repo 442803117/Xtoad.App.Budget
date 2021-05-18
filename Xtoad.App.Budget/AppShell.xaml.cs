@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xtoad.App.Budget.ViewModels;
 using Xtoad.App.Budget.Views;
-using Xtoad.App.Budget.Views.Bucket;
+using Xtoad.App.Budget.Views.Buckets;
 
 namespace Xtoad.App.Budget
 {
@@ -16,7 +16,7 @@ namespace Xtoad.App.Budget
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
-            Routing.RegisterRoute(nameof(BucketMoneyHouseDetailPage), typeof(BucketMoneyHouseDetailPage));
+            Routing.RegisterRoute(nameof(BucketBankDetailPage), typeof(BucketBankDetailPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

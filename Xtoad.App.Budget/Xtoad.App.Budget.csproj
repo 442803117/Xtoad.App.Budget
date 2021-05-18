@@ -25,8 +25,8 @@
     <Compile Update="Views\CoustmContentView\Home\Bucket\BucketMoneyHouse.xaml.cs">
       <DependentUpon>BucketMoneyHouse.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Bucket\BucketMoneyHouseDetailPage.xaml.cs">
-      <DependentUpon>BucketMoneyHouseDetailPage.xaml</DependentUpon>
+    <Compile Update="Views\Buckets\BucketBankDetailPage.xaml.cs">
+      <DependentUpon>BucketBankDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>

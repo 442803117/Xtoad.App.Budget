@@ -6,34 +6,34 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 using Xtoad.App.Budget.Models;
-using Xtoad.App.Budget.Models.Bucket;
+using Xtoad.App.Budget.Models.Buckets;
 using Xtoad.App.Budget.Services;
-using Xtoad.App.Budget.ViewModels.Bucket;
+using Xtoad.App.Budget.ViewModels.Buckets;
 using Xtoad.App.Budget.Views;
-using Xtoad.App.Budget.Views.Bucket;
+using Xtoad.App.Budget.Views.Buckets;
 
 namespace Xtoad.App.Budget.ViewModels.Home.Bucket
 {
     public class HouseItemsViewModel : BaseViewModel
     {
 
-        public IDataStore<BucketMoneyHouse> DataStore => DependencyService.Get<IDataStore<BucketMoneyHouse>>();
+        public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
 
-        private BucketMoneyHouse _selectedItem;
+        private BucketBankHouse _selectedItem;
 
-        public ObservableCollection<BucketMoneyHouse> Items { get; }
+        public ObservableCollection<BucketBankHouse> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<BucketMoneyHouse> ItemTapped { get; }
+        public Command<BucketBankHouse> ItemTapped { get; }
 
         public HouseItemsViewModel()
         {
             Title = "买房心愿";
             IsBusy = true;
-            Items = new ObservableCollection<BucketMoneyHouse>();
+            Items = new ObservableCollection<BucketBankHouse>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<BucketMoneyHouse>(OnItemSelected);
+            ItemTapped = new Command<BucketBankHouse>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -67,7 +67,7 @@ namespace Xtoad.App.Budget.ViewModels.Home.Bucket
             SelectedItem = null;
         }
 
-        public BucketMoneyHouse SelectedItem
+        public BucketBankHouse SelectedItem
         {
             get => _selectedItem;
             set
@@ -82,13 +82,13 @@ namespace Xtoad.App.Budget.ViewModels.Home.Bucket
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(BucketMoneyHouse item)
+        async void OnItemSelected(BucketBankHouse item)
         {
             if (item == null)
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(BucketMoneyHouseDetailPage)}?{nameof(MoneyHouseDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(BucketBankDetailPage)}?{nameof(BucketBankDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }
