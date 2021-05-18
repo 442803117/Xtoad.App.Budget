@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xtoad.App.Budget.ViewModels.Home.Bucket;
+using Xtoad.App.Budget.ViewModels.Home;
 
-namespace Xtoad.App.Budget.Views.CoustmContentView.Home.Bucket
+namespace Xtoad.App.Budget.Views.CoustmContentView.Home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BucketMoneyHouse : ContentView
+    public partial class BucketBankHouseListView : ContentView
     {
-        public BucketMoneyHouse()
+        public BucketBankHouseListView()
         {
             InitializeComponent();
-            HouseItemsViewModel _BucketMoneyHouseListViewModel = new HouseItemsViewModel();
+            BucketBankHouseListViewModel _BucketMoneyHouseListViewModel = new BucketBankHouseListViewModel();
             _BucketMoneyHouseListViewModel.LoadItemsCommand.Execute(null);
             BindingContext = _BucketMoneyHouseListViewModel;
         }

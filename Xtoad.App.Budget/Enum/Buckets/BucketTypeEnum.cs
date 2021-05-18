@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace Xtoad.App.Budget.Enum.Bucket
+namespace Xtoad.App.Budget.Enum.Buckets
 {
     public enum BucketTypeEnum
     {

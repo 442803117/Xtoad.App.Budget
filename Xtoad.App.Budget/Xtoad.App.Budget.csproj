@@ -22,8 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\CoustmContentView\Home\Bucket\BucketMoneyHouse.xaml.cs">
-      <DependentUpon>BucketMoneyHouse.xaml</DependentUpon>
+    <Compile Update="Views\CoustmContentView\Buckets\BucketBankPlanListView.xaml.cs">
+      <DependentUpon>BucketBankPlanListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CoustmContentView\Home\BucketBankHouseListView.xaml.cs">
+      <DependentUpon>BucketBankHouseListView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Buckets\BucketBankDetailPage.xaml.cs">
       <DependentUpon>BucketBankDetailPage.xaml</DependentUpon>
@@ -37,7 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\CoustmContentView\Home\Bucket\BucketMoneyHouse.xaml">
+    <EmbeddedResource Update="Views\CoustmContentView\Buckets\BucketBankPlanListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CoustmContentView\Home\BucketBankHouseListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage.xaml">

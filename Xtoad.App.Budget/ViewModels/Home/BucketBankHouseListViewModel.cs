@@ -12,9 +12,9 @@ using Xtoad.App.Budget.ViewModels.Buckets;
 using Xtoad.App.Budget.Views;
 using Xtoad.App.Budget.Views.Buckets;
 
-namespace Xtoad.App.Budget.ViewModels.Home.Bucket
+namespace Xtoad.App.Budget.ViewModels.Home
 {
-    public class HouseItemsViewModel : BaseViewModel
+    public class BucketBankHouseListViewModel : BaseViewModel
     {
 
         public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
@@ -26,7 +26,7 @@ namespace Xtoad.App.Budget.ViewModels.Home.Bucket
         public Command AddItemCommand { get; }
         public Command<BucketBankHouse> ItemTapped { get; }
 
-        public HouseItemsViewModel()
+        public BucketBankHouseListViewModel()
         {
             Title = "买房心愿";
             IsBusy = true;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Xtoad.App.Budget.Enum.Bucket;
+using Xtoad.App.Budget.Enum.Buckets;
 
 namespace Xtoad.App.Budget.Models.Buckets
 {

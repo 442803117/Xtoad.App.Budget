@@ -6,8 +6,16 @@
 
     <StackLayout Spacing="20" Padding="15">
         <Label Text="{Binding Text}" FontSize="Large"/>
-        <Label Text="Description:" FontSize="Medium" />
+        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Source="house.jpg" 
+                                               VerticalOptions="Fill" 
+                                               HorizontalOptions="Fill"></Image>
         <Label Text="{Binding Description}" FontSize="Small"/>
+
+        <Frame>
+            <Label Text="攒钱记录" TextColor="Black"/>
+            
+        </Frame>
+        
     </StackLayout>
     
 </ContentPage>
