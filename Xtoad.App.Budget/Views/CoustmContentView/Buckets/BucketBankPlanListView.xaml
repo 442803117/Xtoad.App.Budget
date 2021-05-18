@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localconverter="Xtoad.App.Budget.Converters"
              x:Class="Xtoad.App.Budget.Views.CoustmContentView.Buckets.BucketBanPlankListView">
     <ContentView.Content>
-        <StackLayout>
+        <StackLayout Padding="0">
             <ListView x:Name="bucketBanPlankListView" IsPullToRefreshEnabled="True" ItemsSource="{Binding Items}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -11,9 +12,10 @@
                             <ViewCell.ContextActions>
                                 <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="删除" IsDestructive="True" />
                             </ViewCell.ContextActions>
-                            <StackLayout Orientation="Horizontal" Padding="15,0">
-                                <Label Text="{Binding BankTime}" />
-                                <Label Text="{Binding Path=Amount, StringFormat='{0:###,##}'}" />
+                            <StackLayout Orientation="Horizontal" Spacing="20">
+                                <Label Text="{Binding Path=BankTime, StringFormat='{0:yyyy-MM-dd}'}" />
+                                <Label Text="{Binding Path=Amount, StringFormat='存入￥{0:###,##}'}" />
+                                <Label Text="{Binding BankStatus}" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

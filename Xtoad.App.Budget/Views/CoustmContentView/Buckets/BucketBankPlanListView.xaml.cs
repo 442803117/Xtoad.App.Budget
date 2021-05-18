@@ -16,7 +16,9 @@ namespace Xtoad.App.Budget.Views.CoustmContentView.Buckets
         public BucketBanPlankListView()
         {
             InitializeComponent();
-            BindingContext = new BucketBankPlanViewModel();
+            BucketBankPlanViewModel _BucketBankPlanViewModel = new BucketBankPlanViewModel();
+            _BucketBankPlanViewModel.LoadItemsCommand.Execute(null);
+            BindingContext = _BucketBankPlanViewModel;
         }
 
         public void OnDelete(object sender, EventArgs e)

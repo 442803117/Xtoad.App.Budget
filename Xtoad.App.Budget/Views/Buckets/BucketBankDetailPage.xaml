@@ -9,12 +9,12 @@
     <StackLayout Spacing="20" Padding="15">
         <Label Text="{Binding Text}" FontSize="Large"/>
         <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Source="house.jpg" 
-                                               VerticalOptions="Fill" 
-                                               HorizontalOptions="Fill"></Image>
+                                               VerticalOptions="Center"  
+                                               HorizontalOptions="Center"></Image>
         <Label Text="{Binding Description}" FontSize="Small"/>
 
-        <Frame>
-            <StackLayout Spacing="20" Padding="15">
+        <Frame HasShadow="False">
+            <StackLayout Padding="0">
                 <Label Text="攒钱记录" TextColor="Black"/>
                 <localview:BucketBanPlankListView />
             </StackLayout>

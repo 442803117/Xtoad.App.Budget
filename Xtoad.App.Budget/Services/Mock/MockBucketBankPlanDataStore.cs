@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Xtoad.App.Budget.Enum.Buckets;
 using Xtoad.App.Budget.Models;
 using Xtoad.App.Budget.Models.Buckets;
 
@@ -15,9 +16,9 @@ namespace Xtoad.App.Budget.Services.Mock
         {
             items = new List<BucketBankPlan>()
             {
-                new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2000, BankTime= new DateTime(2021, 4,2) },
-                new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2100, BankTime= new DateTime(2021, 4,28) },
-                new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2) },
+                new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2000, BankTime= new DateTime(2021, 4,2) , BankStatus = BankPlanStatusEnum.Finish },
+                new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2100, BankTime= new DateTime(2021, 4,28), BankStatus = BankPlanStatusEnum.Finish },
+                new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
             };
         }
 
