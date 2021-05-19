@@ -1,17 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:localconverter="Xtoad.App.Budget.Converters"
+             xmlns:converters="clr-namespace:Xtoad.App.Budget.Converters"
              VerticalOptions="FillAndExpand"
              x:Class="Xtoad.App.Budget.Views.CoustmContentView.Buckets.BucketBanPlankListView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:EnumToDescConverter x:Key="EnumToDescConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
     <ContentView.Content>
         <CollectionView x:Name="bucketBanPlankListView" ItemsSource="{Binding Items}" ItemsLayout="VerticalList" Header="攒钱记录" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Horizontal" Spacing="25" Padding="5" >
-                            <Label Text="{Binding Path=BankTime, StringFormat='{0:yyyy-MM-dd}'}" />
+                            <Label Text="{Binding Path=BankTime, StringFormat='{0:yyyy-MM-dd}日'}" />
                             <Label Text="{Binding Path=Amount, StringFormat='存入￥{0:###,##}'}" />
-                        <Label Text="{Binding BankStatus}" />
+                        <Label Text="{Binding BankStatus,Converter={StaticResource EnumToDescConverter}}" />
                     </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

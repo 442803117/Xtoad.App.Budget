@@ -8,35 +8,31 @@ using Xamarin.Forms;
 
 namespace Xtoad.App.Budget.Converters
 {
-    public class EnumToDescConverter : EnumConverter
+    public class EnumToDescConverter : IValueConverter
     {
-        public EnumToDescConverter(Type type) : base(type)
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-        }
-
-        public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
-        {
-            if (destinationType == typeof(string))
+            if (null != value)
             {
-                if (null != value)
+                FieldInfo fi = value.GetType().GetField(value.ToString());
+
+                if (null != fi)
                 {
-                    FieldInfo fi = value.GetType().GetField(value.ToString());
+                    var attributes =
+                        (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
 
-                    if (null != fi)
-                    {
-                        var attributes =
-                            (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
-
-                        return (attributes.Length > 0 && (!string.IsNullOrEmpty(attributes[0].Description)))
-                            ? attributes[0].Description
-                            : value.ToString();
-                    }
+                    return (attributes.Length > 0 && (!string.IsNullOrEmpty(attributes[0].Description)))
+                        ? attributes[0].Description
+                        : value.ToString();
                 }
-
-                return string.Empty;
             }
-            return base.ConvertTo(context, culture, value, destinationType);
+
+            return string.Empty;
         }
 
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
