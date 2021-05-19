@@ -12,13 +12,9 @@
                                                VerticalOptions="Center"  
                                                HorizontalOptions="Center"></Image>
         <Label Text="{Binding Description}" FontSize="Small"/>
+        <localview:BucketBanPlankListView VerticalOptions="FillAndExpand"/>
 
-        <Frame HasShadow="False">
-            <StackLayout Padding="0">
-                <Label Text="攒钱记录" TextColor="Black"/>
-                <localview:BucketBanPlankListView />
-            </StackLayout>
-        </Frame>
+
         
     </StackLayout>
     

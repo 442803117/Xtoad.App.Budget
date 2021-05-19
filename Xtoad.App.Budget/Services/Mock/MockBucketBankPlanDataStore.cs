@@ -19,6 +19,17 @@ namespace Xtoad.App.Budget.Services.Mock
                 new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2000, BankTime= new DateTime(2021, 4,2) , BankStatus = BankPlanStatusEnum.Finish },
                 new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2100, BankTime= new DateTime(2021, 4,28), BankStatus = BankPlanStatusEnum.Finish },
                 new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                 new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                  new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                   new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                    new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
+                     new BucketBankPlan { Id = Guid.NewGuid().ToString(), MainId = "1", Amount = 2200, BankTime= new DateTime(2021, 5,2), BankStatus = BankPlanStatusEnum.Finish },
             };
         }
 
