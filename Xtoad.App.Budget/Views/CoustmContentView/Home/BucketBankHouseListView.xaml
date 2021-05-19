@@ -4,20 +4,20 @@
              x:Class="Xtoad.App.Budget.Views.CoustmContentView.Home.BucketBankHouseListView"
              xmlns:local="clr-namespace:Xtoad.App.Budget.ViewModels.Home"
              xmlns:model="clr-namespace:Xtoad.App.Budget.Models.Buckets">
-  <ContentView.Content>
-      <StackLayout Padding="8">
+    <ContentView.Content>
+        <StackLayout Padding="8">
             <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" TextColor="Black"></Label>
             <!--<RefreshView x:DataType="local:BucketMoneyHouseViewModel" Command="{Binding LoadItemsCommand}" 
                          IsRefreshing="{Binding IsBusy, Mode=TwoWay}">-->
             <CollectionView x:Name="BucketMoneyHouseItemsListView"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
                         <StackLayout x:DataType="model:BucketBankHouse" Margin="4">
-                                <Frame BackgroundColor="AliceBlue" BorderColor="#EFEFEF" HasShadow="False" 
+                            <Frame BackgroundColor="AliceBlue" BorderColor="#EFEFEF" HasShadow="False" 
                                        CornerRadius="10" IsClippedToBounds="True" Padding="0" >
-                                    <StackLayout Orientation="Vertical" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <StackLayout Orientation="Vertical" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -29,7 +29,7 @@
                             FontSize="16" />
                                         <Label Grid.Row="0" Grid.Column="1" Margin="0, 0,5,0" TextColor="YellowGreen" BackgroundColor="AliceBlue" Text="去攒钱"></Label>
                                     </Grid>
-        
+
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition></RowDefinition>
@@ -40,7 +40,7 @@
                                             <ColumnDefinition ></ColumnDefinition>
                                             <ColumnDefinition></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                       <!-- <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Padding="0" HasShadow="False" BorderColor="White" BackgroundColor="White"
+                                        <!-- <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Padding="0" HasShadow="False" BorderColor="White" BackgroundColor="White"
                                        CornerRadius="200" IsClippedToBounds="True" > -->
                                         <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Source="house.jpg" 
                                                VerticalOptions="Fill" 
@@ -77,28 +77,28 @@
                                             <Label Text="元" VerticalOptions="End" FontSize="12"></Label>
                                         </StackLayout>
                                     </Grid>
-                                   
+
                                     <Label Text="{Binding Description}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />
-                                    </StackLayout>
-                                </Frame>
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer 
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:BucketBankHouseListViewModel}}, Path=ItemTapped}"		
                                 CommandParameter="{Binding .}">
-                                    </TapGestureRecognizer>
-                                </StackLayout.GestureRecognizers>
-                               
-                            </StackLayout>
-                            
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+
+                        </StackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
             <!--</RefreshView>-->
-            
+
         </StackLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

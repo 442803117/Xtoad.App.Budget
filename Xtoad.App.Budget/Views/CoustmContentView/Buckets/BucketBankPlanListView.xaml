@@ -11,15 +11,15 @@
     </ContentView.Resources>
     <ContentView.Content>
         <CollectionView x:Name="bucketBanPlankListView" ItemsSource="{Binding Items}" ItemsLayout="VerticalList" Header="攒钱记录" >
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Orientation="Horizontal" Spacing="25" Padding="5" >
-                            <Label Text="{Binding Path=BankTime, StringFormat='{0:yyyy-MM-dd}日'}" />
-                            <Label Text="{Binding Path=Amount, StringFormat='存入￥{0:###,##}'}" />
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Spacing="25" Padding="5" >
+                        <Label Text="{Binding Path=BankTime, StringFormat='{0:yyyy-MM-dd}日'}" />
+                        <Label Text="{Binding Path=Amount, StringFormat='存入￥{0:###,##}'}" />
                         <Label Text="{Binding BankStatus,Converter={StaticResource EnumToDescConverter}}" />
                     </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentView.Content>
 </ContentView>
