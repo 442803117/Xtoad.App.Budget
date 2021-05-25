@@ -6,8 +6,13 @@
              xmlns:localview="clr-namespace:Xtoad.App.Budget.Views.CoustmContentView.Home"
              x:Class="Xtoad.App.Budget.Views.HomePage" BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
-            <!--<RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="Fill" >
+                <localview:BucketBankHouseListView />
+            </StackLayout>
+        </ScrollView>
+        <!--<StackLayout Orientation="Vertical" VerticalOptions="Fill" >
+            <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
@@ -33,8 +38,10 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </RefreshView>-->
+            </RefreshView>
             <localview:BucketBankHouseListView />
-        </StackLayout>
+            <localview:BucketBankHouseListView />
+            <localview:BucketBankHouseListView />
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>
