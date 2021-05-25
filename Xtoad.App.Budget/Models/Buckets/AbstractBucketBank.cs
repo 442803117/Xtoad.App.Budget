@@ -37,11 +37,11 @@ namespace Xtoad.App.Budget.Models.Buckets
         /// <summary>
         /// 已完成的百分比
         /// </summary>
-        public int Percent
+        public Decimal Percent
         {
             get
             {
-                return (int)(Own / Amount) * 100;
+                return Own / Amount;
             }
         }
         /// <summary>

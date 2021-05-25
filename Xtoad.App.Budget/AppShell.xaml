@@ -119,7 +119,7 @@
                 <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf21e;" Size="100" />
             </ShellContent.Icon>
         </ShellContent>
-        <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" >
+        <ShellContent Title="添加" ContentTemplate="{DataTemplate local:ItemsPage}" >
             <ShellContent.Icon>
                 <FontImageSource FontFamily="FontAwesome5Free-Solid" Glyph="&#xf055;" Size="Large" />
             </ShellContent.Icon>

@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Buckets\BucketBankAddPage.xaml.cs">
+      <DependentUpon>BucketBankAddPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\CoustmContentView\Buckets\BucketBankPlanListView.xaml.cs">
       <DependentUpon>BucketBankPlanListView.xaml</DependentUpon>
     </Compile>

@@ -16,11 +16,11 @@ namespace Xtoad.App.Budget.Services.Mock
             items = new List<BucketBankHouse>()
             {
                 new BucketBankHouse { Id ="1", Title = "我要买首套房", 
-                    Description="This is an item description." ,Amount = 250000, Own=1000 },
+                    Description="This is an item description." ,Amount = 250000, Own=100000 },
                 new BucketBankHouse { Id = Guid.NewGuid().ToString(), Title = "Second item", 
-                    Description="This is an item description." ,Amount = 350000, Own=1000},
+                    Description="This is an item description." ,Amount = 350000, Own=210000},
                 new BucketBankHouse { Id = Guid.NewGuid().ToString(), Title = "Sixth item", 
-                    Description="This is an item description." ,Amount = 50000 , Own=1000}
+                    Description="This is an item description." ,Amount = 50000 , Own=35000}
             };
         }
 

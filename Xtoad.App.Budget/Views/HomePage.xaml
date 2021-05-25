@@ -6,7 +6,7 @@
              xmlns:localview="clr-namespace:Xtoad.App.Budget.Views.CoustmContentView.Home"
              x:Class="Xtoad.App.Budget.Views.HomePage" BackgroundColor="White">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
             <StackLayout Orientation="Vertical" VerticalOptions="Fill" >
                 <localview:BucketBankHouseListView />
             </StackLayout>

@@ -5,7 +5,7 @@
              x:Class="Xtoad.App.Budget.Views.Buckets.BucketBankDetailPage"
              
              Title="{Binding Title}">
-    <ScrollView>
+    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
         
 
     <StackLayout Spacing="20" Padding="15">

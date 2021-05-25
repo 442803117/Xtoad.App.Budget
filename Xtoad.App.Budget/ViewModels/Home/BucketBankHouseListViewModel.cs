@@ -48,6 +48,7 @@ namespace Xtoad.App.Budget.ViewModels.Home
                 var items = await DataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
+                    Debug.WriteLine(item.Percent);
                     Items.Add(item);
                 }
             }
