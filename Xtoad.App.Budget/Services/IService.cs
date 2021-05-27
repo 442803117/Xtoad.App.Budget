@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Xtoad.App.Budget.Services
 {
-    public interface IDataStore<T>
+    public interface IService<T>
     {
         Task<bool> AddItemAsync(T item);
         Task<bool> UpdateItemAsync(T item);

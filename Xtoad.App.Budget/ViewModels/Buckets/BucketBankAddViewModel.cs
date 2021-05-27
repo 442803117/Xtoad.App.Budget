@@ -9,9 +9,9 @@ using Xtoad.App.Budget.Services;
 namespace Xtoad.App.Budget.ViewModels.Buckets
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class BucketBankDetailViewModel : BaseViewModel
+    public class BucketBankAddViewModel : BaseViewModel
     {
-        public IService<BucketBankHouse> DataStore => DependencyService.Get<IService<BucketBankHouse>>();
+        public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
 
         private string itemId;
         private string text;

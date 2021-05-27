@@ -10,7 +10,7 @@ namespace Xtoad.App.Budget.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IService<Item> DataStore => DependencyService.Get<IService<Item>>();
 
 
         private string text;

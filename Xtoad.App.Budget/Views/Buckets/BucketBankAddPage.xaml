@@ -4,21 +4,43 @@
              xmlns:localview="clr-namespace:Xtoad.App.Budget.Views.CoustmContentView.Buckets"
              x:Class="Xtoad.App.Budget.Views.Buckets.BucketBankAddPage"
              
-             Title="{Binding Title}">
+             Title="添加心愿">
     <ScrollView>
-        
 
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="{Binding Text}" FontSize="Large"/>
-        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Source="house.jpg" 
-                                               VerticalOptions="Center"  
-                                               HorizontalOptions="Center"></Image>
-        <Label Text="{Binding Description}" FontSize="Small"/>
-        <localview:BucketBanPlankListView VerticalOptions="FillAndExpand"/>
+        <StackLayout Spacing="20" Padding="15">
+            <StackLayout x:Name="setpOne">
+                <Label Text="请选择心愿类型：" FontSize="Large"/>
+                <ProgressBar Progress="0.2" ProgressColor="Orange"></ProgressBar>
 
 
-        
-    </StackLayout>
+                <CollectionView ItemsSource="{Binding Monkeys}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <RadioButton></RadioButton>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.EmptyView>
+                        <ContentView>
+                            <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                                <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                                <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                        </ContentView>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+            </StackLayout>
+
+        </StackLayout>
     </ScrollView>
     
 </ContentPage>

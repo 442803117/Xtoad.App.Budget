@@ -11,7 +11,7 @@ namespace Xtoad.App.Budget.Views.Buckets
         public BucketBankAddPage()
         {
             InitializeComponent();
-            BindingContext = new BucketBankDetailViewModel();
+            //BindingContext = new BucketBankDetailViewModel();
         }
     }
 }

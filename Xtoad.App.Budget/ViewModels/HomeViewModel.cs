@@ -13,7 +13,7 @@ namespace Xtoad.App.Budget.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IService<Item> DataStore => DependencyService.Get<IService<Item>>();
 
 
         private Item _selectedItem;

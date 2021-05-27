@@ -8,11 +8,11 @@ using Xtoad.App.Budget.Models.Buckets;
 
 namespace Xtoad.App.Budget.Services.Mock
 {
-    public class MockBucketBankPlanDataStore : IDataStore<BucketBankPlan>
+    public class MockBucketBankPlanService : IService<BucketBankPlan>
     {
         readonly List<BucketBankPlan> items;
 
-        public MockBucketBankPlanDataStore()
+        public MockBucketBankPlanService()
         {
             items = new List<BucketBankPlan>()
             {

@@ -10,7 +10,7 @@ namespace Xtoad.App.Budget.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IService<Item> DataStore => DependencyService.Get<IService<Item>>();
 
         private string itemId;
         private string text;
