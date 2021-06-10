@@ -17,7 +17,7 @@ namespace Xtoad.App.Budget.ViewModels.Home
     public class BucketBankHouseListViewModel : BaseViewModel
     {
 
-        public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
+        public IService<BucketBankHouse> DataStore => DependencyService.Get<IService<BucketBankHouse>>();
 
         private BucketBankHouse _selectedItem;
 

@@ -17,6 +17,7 @@ namespace Xtoad.App.Budget
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(BucketBankDetailPage), typeof(BucketBankDetailPage));
+            Routing.RegisterRoute(nameof(BucketBankAddPage), typeof(BucketBankAddPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

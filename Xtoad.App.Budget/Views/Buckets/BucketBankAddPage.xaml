@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:localview="clr-namespace:Xtoad.App.Budget.Views.CoustmContentView.Buckets"
-             x:Class="Xtoad.App.Budget.Views.Buckets.BucketBankAddPage"
+             x:Class="Xtoad.App.Budget.Views.BucketBankAddPage"
              
              Title="添加心愿">
     <ScrollView>
@@ -13,10 +13,10 @@
                 <ProgressBar Progress="0.2" ProgressColor="Orange"></ProgressBar>
 
 
-                <CollectionView ItemsSource="{Binding Monkeys}">
+                <CollectionView ItemsSource="{Binding BucketType}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <RadioButton></RadioButton>
+                            <RadioButton Text="{Binding Value}"></RadioButton>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                     <CollectionView.EmptyView>
