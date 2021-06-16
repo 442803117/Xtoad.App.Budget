@@ -5,18 +5,19 @@
              x:Class="Xtoad.App.Budget.Views.BucketBankAddPage"
              
              Title="添加心愿">
-    <ScrollView>
+
 
         <StackLayout Spacing="20" Padding="15">
-            <StackLayout x:Name="setpOne">
+                <ProgressBar Progress="0.1" ProgressColor="Orange"></ProgressBar>
+        <ScrollView>
+            <StackLayout x:Name="setpOne" Orientation="Vertical" Spacing="25">
                 <Label Text="请选择心愿类型：" FontSize="Large"/>
-                <ProgressBar Progress="0.2" ProgressColor="Orange"></ProgressBar>
-
-
                 <CollectionView ItemsSource="{Binding BucketType}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <RadioButton Text="{Binding Value}"></RadioButton>
+                            <StackLayout Margin="5">
+                                <Button Text="{Binding Value}"></Button>
+                            </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                     <CollectionView.EmptyView>
@@ -39,8 +40,8 @@
                     </CollectionView.EmptyView>
                 </CollectionView>
             </StackLayout>
+        </ScrollView>
+    </StackLayout>
 
-        </StackLayout>
-    </ScrollView>
     
 </ContentPage>

@@ -20,8 +20,14 @@ namespace Xtoad.App.Budget.ViewModels.Buckets
 
         private Dictionary<string, string> bucketType;
 
+
+        public Command BucketTypeCommand { get; } 
+       
+
+
         public BucketBankAddViewModel() {
             bucketType = EnumUtils.GetEnumDescription<BucketTypeEnum>();
+            BucketTypeCommand = new Command(async () => await BucketTypeClickCommand());
         }
 
         public Dictionary<string, string> BucketType {
@@ -34,19 +40,22 @@ namespace Xtoad.App.Budget.ViewModels.Buckets
             set => SetProperty<BucketBankHouse>(ref item, value);
         }
 
-        //public async void LoadItemId(string itemId)
-        //{
-        //    try
-        //    {
-        //        var item = await DataStore.GetItemAsync(itemId);
-        //        Id = item.Id;
-        //        Text = item.Title;
-        //        Description = item.Description;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        Debug.WriteLine("Failed to Load Item");
-        //    }
-        //}
+        async Task BucketTypeClickCommand()
+        {
+            IsBusy = true;
+
+            try
+            {
+               
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace Xtoad.App.Budget.ViewModels
                 await App.Current.MainPage.DisplayAlert("xxx", "dddd", "OK");
                 return;
             }
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            await Shell.Current.GoToAsync($"//AboutPage");
         }
     }
 }
