@@ -1,61 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xtoad.App.Budget.Enum.Buckets;
 using Xtoad.App.Budget.Models;
 using Xtoad.App.Budget.Models.Buckets;
 using Xtoad.App.Budget.Services;
+using Xtoad.App.Budget.Util;
 
 namespace Xtoad.App.Budget.ViewModels.Buckets
 {
-    [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class BucketBankAddViewModel : BaseViewModel
     {
-        public IDataStore<BucketBankHouse> DataStore => DependencyService.Get<IDataStore<BucketBankHouse>>();
+        public IService<BucketBankHouse> DataStore => DependencyService.Get<IService<BucketBankHouse>>();
 
-        private string itemId;
-        private string text;
-        private string description;
-        public string Id { get; set; }
+        public Dictionary<string, string> BucketType;
 
-        public string Text
-        {
-            get => text;
-            set => SetProperty(ref text, value);
+        private BucketBankHouse item;
+
+        public BucketBankAddViewModel() {
+            BucketType = EnumUtils.GetEnumDescription<BucketTypeEnum>();
         }
 
-        public string Description
+        public BucketBankHouse Item
         {
-            get => description;
-            set => SetProperty(ref description, value);
-        }
-
-        public string ItemId
-        {
-            get
-            {
-                return itemId;
-            }
-            set
-            {
-                itemId = value;
-                LoadItemId(value);
-            }
-        }
-
-        public async void LoadItemId(string itemId)
-        {
-            try
-            {
-                var item = await DataStore.GetItemAsync(itemId);
-                Id = item.Id;
-                Text = item.Title;
-                Description = item.Description;
-            }
-            catch (Exception)
-            {
-                Debug.WriteLine("Failed to Load Item");
-            }
+            get => item;
+            set => SetProperty(ref item, value);
         }
     }
 }

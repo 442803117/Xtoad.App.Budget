@@ -17,7 +17,7 @@ namespace Xtoad.App.Budget.ViewModels.Home
     public class BucketBankPlanViewModel : BaseViewModel
     {
 
-        public IDataStore<BucketBankPlan> DataStore => DependencyService.Get<IDataStore<BucketBankPlan>>();
+        public IService<BucketBankPlan> DataStore => DependencyService.Get<IService<BucketBankPlan>>();
 
         private BucketBankPlan _selectedItem;
 

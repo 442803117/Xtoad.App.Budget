@@ -6,7 +6,7 @@ using Xtoad.App.Budget.Models;
 
 namespace Xtoad.App.Budget.Services.Mock
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IService<Item>
     {
         readonly List<Item> items;
 
