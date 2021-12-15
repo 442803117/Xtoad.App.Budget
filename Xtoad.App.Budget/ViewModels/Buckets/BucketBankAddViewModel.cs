@@ -41,7 +41,7 @@ namespace Xtoad.App.Budget.ViewModels.Buckets
             set => SetProperty<BucketBankHouse>(ref item, value);
         }
 
-        async Task BucketTypeClickCommand()
+        Task BucketTypeClickCommand()
         {
             IsBusy = true;
 
@@ -57,6 +57,8 @@ namespace Xtoad.App.Budget.ViewModels.Buckets
             {
                 IsBusy = false;
             }
+
+            return Task.CompletedTask;
         }
     }
 }

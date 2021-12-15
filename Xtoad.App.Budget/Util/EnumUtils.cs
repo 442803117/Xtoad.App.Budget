@@ -94,6 +94,7 @@ namespace Xtoad.App.Budget.Util
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return "";
             }
         }
