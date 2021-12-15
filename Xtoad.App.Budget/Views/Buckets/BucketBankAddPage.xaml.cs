@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using Xtoad.App.Budget.ViewModels;
 using Xtoad.App.Budget.ViewModels.Buckets;
 
-namespace Xtoad.App.Budget.Views.Buckets
+namespace Xtoad.App.Budget.Views
 {
     public partial class BucketBankAddPage : ContentPage
     {
